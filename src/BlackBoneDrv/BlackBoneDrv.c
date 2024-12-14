@@ -514,7 +514,7 @@ NTSTATUS BBInitDynamicData( IN OUT PDYNAMIC_DATA pData )
         DPRINT( "BlackBone: PDE_BASE: %p, PTE_BASE: %p\n", pData->DYN_PDE_BASE, pData->DYN_PTE_BASE );
         if (pData->DYN_PDE_BASE < MI_SYSTEM_RANGE_START || pData->DYN_PTE_BASE < MI_SYSTEM_RANGE_START)
         {
-            DPRINT( "BlackBone: Invalid PDE/PTE base, aborting\n" );
+            DPRINT("BlackBone: Invalid PDE/PTE base, aborting\n", pData->DYN_PDE_BASE, pData->DYN_PTE_BASE);
             return STATUS_UNSUCCESSFUL;
         }
         
